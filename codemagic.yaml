@@ -1,0 +1,21 @@
+workflows:
+  android-build:
+    name: Android Build
+    max_build_duration: 60
+    environment:
+      groups:
+        - keystore_credentials
+      vars:
+        PACKAGE_NAME: "com.oa.app"
+    scripts:
+      - name: Build Android APK
+        script: |
+          cd android
+          chmod +x ./gradlew
+          ./gradlew assembleDebug
+    artifacts:
+      - android/app/build/outputs/**/*.apk
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
