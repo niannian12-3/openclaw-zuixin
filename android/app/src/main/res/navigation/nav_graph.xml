@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <!-- 登录页面 -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.oa.app.ui.login.LoginFragment"
+        android:label="登录">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <!-- 主页面 -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.oa.app.ui.home.HomeFragment"
+        android:label="主页">
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <!-- 原有的其他页面（暂时保留） -->
+    <fragment
+        android:id="@+id/navigation_attendance"
+        android:name="com.oa.app.ui.attendance.AttendanceFragment"
+        android:label="@string/attendance" />
+
+    <fragment
+        android:id="@+id/navigation_leave"
+        android:name="com.oa.app.ui.leave.LeaveFragment"
+        android:label="@string/leave" />
+
+    <fragment
+        android:id="@+id/navigation_expense"
+        android:name="com.oa.app.ui.expense.ExpenseFragment"
+        android:label="@string/expense" />
+
+    <fragment
+        android:id="@+id/navigation_employees"
+        android:name="com.oa.app.ui.employees.EmployeesFragment"
+        android:label="@string/employees" />
+
+    <fragment
+        android:id="@+id/navigation_mine"
+        android:name="com.oa.app.ui.mine.MineFragment"
+        android:label="@string/nav_mine" />
+
+</navigation>

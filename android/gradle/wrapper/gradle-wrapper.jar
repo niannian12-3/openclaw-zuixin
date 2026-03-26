@@ -1,0 +1,6 @@
+# 这是一个占位文件，真正的 JAR 文件需要下载
+# 请运行以下命令下载：
+# powershell -Command "Invoke-WebRequest -Uri 'https://repo.maven.apache.org/maven2/gradle/wrapper/gradle-wrapper/8.5/gradle-wrapper-8.5.jar' -OutFile 'gradle-wrapper.jar'"
+
+# 或者使用备用链接：
+# https://services.gradle.org/distributions/gradle-8.5-all.zip
